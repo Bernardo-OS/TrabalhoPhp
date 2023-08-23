@@ -22,33 +22,42 @@
         </style>
 </head>
 <body style="background-color: rgb(65, 65, 65);">
-<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
-    <div class="c-sidebar-brand d-lg-down-none">
-        <i class="fa fa-spotify" style="color: #28c356;"></i>
-        <h3>Sportfy</h3>
-    </div>
-    <ul class="c-sidebar-nav">
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="home.php">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="row">
+        <h3><i class="fa fa-play" style="color: #28c356;"></i>Playerdbphp</h3>
+        </div>
+        <ul>
+        <li class="mt-1 mb-1" style="list-style: none;">
+            <a class="btn btn-danger w-100" role="button" href="home.php">
                 <i class="c-sidebar-nav-icon fa fa-home"></i> Página Inicial </a>
         </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="Recomendados.php">
+        <li class="mt-1 mb-1" style="list-style: none;">
+            <a class="btn btn-danger w-100" href="recomendados.php">
             <i class="fa fa-record-vinyl"></i> recomendados </a>
         </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="Buscar.php">
-            <i class="fa fa-magnifying-glass"></i> Buscar </a>
+        <li class="mt-1 mb-1" style="list-style: none;">
+            <a class="btn btn-danger w-100" href="buscar.php">
+            <i class="fa fa-search"></i> Buscar </a>
         </li>
+        <li class="mt-1 mb-1" style="list-style: none;">
+            <a class="btn btn-danger w-100" href="sobre.php">
+            <i class="fa fa-question"></i> Sobre </a>
         <?php
-                    @session_start();
-                    if($_SESSION){
-                        echo('<li class="nav-item">
-                        <a class="nav-link link-danger" 
-                        style="text-decoration: none;"
-                        href="controller/logoutController.php?cod=logout">Logout</a>
-                        </li>');
-                    }
+
+        @session_start();
+        if($_SESSION){
+    echo('<li class="mt-1 mb-1" style="list-style: none;">
+        <a class="nav-link link-danger" 
+        style="text-decoration: none;"
+        href="controller/logoutController.php?cod=logout">Logout</a></li></ul>');}
+echo('</div>
+</div>');
+                    //<div class="row">
+
+//</div>
+//<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+//</div>
         ?>
     </ul>
 </div>

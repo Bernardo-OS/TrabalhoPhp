@@ -27,16 +27,16 @@ require_once './shared/header.php';
                 </center>
                 <div class='row '>
                     <div class='col-xs-12 col-sm-12 col-md-10 col-lg-10'>
-                    <p style='font-family: Mr dafoe;' class='texto-sombra text-right mt-3'>$artista</p>
+                    <p style='font-family: Mr dafoe; font-size: 25px' class='text-right mt-3'>$artista</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>");
-    echo("<hr style='border-color: rgb(58, 52, 52);'><br>")
+    echo("<hr style='border-color: rgb(10, 10, 10);'><br>")
 ?>
-    /* Mostrar cada uma das músicas numa lista */
 <?php
+/* Mostrar cada uma das músicas numa lista */
     foreach($album['musicas'] as $musica){
         $mp3 = $musica['mp3'];
         $titulo = $musica['titulo'];
@@ -49,7 +49,7 @@ require_once './shared/header.php';
                     <br><br>
                 </div>");    
         echo("</div>");
-        echo("</div>");
+        echo("</div>/");
     }
 ?>
 <?php
