@@ -5,8 +5,8 @@ include('dados/array.php');
 ?>
 <div class="container-md">
     <br>
-    <h2>Buscar</h2>
-    <table id="minhaTabela"  class="table table-bordered table-striped table-info">
+    <h2>Buscar Álbum</h2>
+    <table  class="table table-bordered table-striped table-info minhaTabela">
         <thead>
             <tr>
                 <th>Nome do álbum</th>
@@ -46,9 +46,53 @@ include('dados/array.php');
             ?>
         </tbody>
     </table>
+    <br>
+    <h2>Buscar Músicas</h2>
+    <table  class="table table-bordered table-striped table-info minhaTabela">
+        <thead>
+            <tr>
+                <th>Nome da música</th>
+                <th>Álbum</th>
+                <th>link álbum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            
+            foreach($albuns as $id => $album){
+                $albumtitulo = $album['titulo'];
+
+                foreach($album['musicas'] as $musica){
+                    $musicatitulo = $musica['titulo'];
+                    echo('<tr>');
+                    echo('<td>');
+                    echo($musicatitulo);
+                    echo('</td>');
+                    echo('<td>');
+                    echo($albumtitulo);
+                    echo('</td>');
+                    echo('<td>');
+                    echo('<a href="detalhe.php?id='.$id.'"><i class="fa fa-record-vinyl"></i>');
+                    echo('</td>');
+                    }
+                }
+                echo('</tr>');
+
+            //foreach ($albuns as $linhas) {
+                //echo('<tr>');
+               //foreach ($linhas as $coluna) {
+                    //echo('<td>');
+                    //echo($coluna);
+                    //echo('</td>');
+                //}
+                //echo('</tr>');
+            //}
+            ?>
+        </tbody>
+    </table>
     <script>
         $(document).ready(function () {
-            $('#minhaTabela').DataTable();
+            $('.minhaTabela').DataTable();
         });
     </script>
 </div>
