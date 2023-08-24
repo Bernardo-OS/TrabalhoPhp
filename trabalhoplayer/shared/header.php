@@ -24,17 +24,13 @@
 <body style="background-color: rgb(65, 65, 65);">
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-        <div class="row">
-        <h3><i class="fa fa-play" style="color: #28c356;"></i>Playerdbphp</h3>
+        <div class="row mr-2">
+        <h3><i class="fa fa-play" style="color: #cc0f0f;"></i>Playerdbphp</h3>
         </div>
         <ul>
         <li class="mt-1 mb-1" style="list-style: none;">
             <a class="btn btn-danger w-100" role="button" href="home.php">
                 <i class="c-sidebar-nav-icon fa fa-home"></i> Página Inicial </a>
-        </li>
-        <li class="mt-1 mb-1" style="list-style: none;">
-            <a class="btn btn-danger w-100" href="recomendados.php">
-            <i class="fa fa-record-vinyl"></i> recomendados </a>
         </li>
         <li class="mt-1 mb-1" style="list-style: none;">
             <a class="btn btn-danger w-100" href="buscar.php">
@@ -51,13 +47,7 @@
         <a class="nav-link link-danger" 
         style="text-decoration: none;"
         href="controller/logoutController.php?cod=logout">Logout</a></li></ul>');}
-echo('</div>
-</div>');
-                    //<div class="row">
-
-//</div>
-//<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-//</div>
+echo('</div>');
         ?>
     </ul>
 </div>
