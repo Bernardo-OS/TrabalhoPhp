@@ -1,7 +1,3 @@
-<?php
-
-require_once './shared/header.php';
-?>
 
 <?php
 
@@ -9,7 +5,7 @@ require_once './shared/header.php';
 $albuns = array(
     '1' => array(
         'titulo' => 'Korn',
-        'capa' => 'imagens/Kornselftitled.jpg',
+        'capa' => 'imagens/kornselftitled.jpg',
         'artista' => 'Korn',
         'lancamento' => 1994,
         'musicas' => array(
@@ -29,7 +25,7 @@ $albuns = array(
     ),
     '3' => array(
         'titulo' => 'In All Her Forms',
-        'capa' => 'imagens/inallherforms',
+        'capa' => 'imagens/inallherforms.jpg',
         'artista' => 'Devils Witches',
         'lancamento' => 2022,
         'musicas' => array(

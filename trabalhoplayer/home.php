@@ -1,14 +1,22 @@
-<?php
-require_once './controller/autenticationController.php';
-require_once './shared/header.php';
-include('dados/array.php');
-?>
-<div class="container p-10">
-        <br>
-        <br>
-        <div class="row mt-8">
-
-        <?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <?php
+    include("shared/head.php");
+    require_once './controller/autenticationController.php';
+    include('dados/array.php');
+    ?>
+</head>
+<body style="background-color: rgb(65, 65, 65);">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <?php
+            include("shared/sidebar.php");
+            ?>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <div class="row">
+            <?php
             foreach($albuns as $id => $album){
                 $capa = $album['capa'];
                 $titulo = $album['titulo'];
@@ -18,16 +26,17 @@ include('dados/array.php');
                 echo("<div class='mt-3 col-xs-6 col-sm-3 col-md-3 col-lg-3' >");
                     echo("<a href='detalhe.php? id=$id' style='text-decoration: none; color: rgb(120, 120, 120)'>");
                     echo("<div class='card text-white' style='background-color: rgb(45, 50, 50);'>");
-                        echo("<div class='card-header'>$titulo</div>");
+                        echo("<div class='card-header text-truncate'>$titulo</div>");
                         echo("<div class='card-body p-0'><img src=$capa class='w-100'></div>");
-                        echo("<div class='card-footer'><p  class='w-100'>$artista</p></div>");
+                        echo("<div class='card-footer'> $artista</div>");
                     echo("</a>");  
                     echo("</div>");  
                 echo("</div>");
             }
-        ?>
+            ?>
+            </div>
+        
         </div>
-</div>
-<?php
-require_once './shared/footer.php';
-?>
+    </div>
+</body>
+</html>
