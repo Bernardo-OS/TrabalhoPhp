@@ -3,7 +3,7 @@ require_once './shared/header.php';
 ?>
 <div class="container-md">
     <form method="get" action="controller/loginController.php">
-        <div class="row" style="border: 2px solid green;
+        <div class="row" style="border: 2px solid darkred;
              margin: 30px 30px 30px 30px; padding: 20px">
             <div class="mb-3 mt-3">
                 <label for="email" class="form-label">Email:</label>
@@ -17,7 +17,7 @@ require_once './shared/header.php';
             </div>
             <div class="d-grid">
                 <input type="submit" value="Logar"
-                       class="btn btn-outline-success" >
+                       class="btn btn-outline-danger" >
                 <br>
             </div>
             <?php

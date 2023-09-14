@@ -22,9 +22,9 @@ require_once './shared/header.php';
             <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
                 <br>
                 <br>
-                <center>
-                    <img src='$capa' class='w-100 shadow p-3 mb-5 bg-transparent rounded'>
-                </center>
+                <div class='d-flex justify-content-center'>
+                    <img src='$capa' class='w-100 shadow p-3 mb-5 bg-transparent rounded' >
+                </div>
                 <div class='row '>
                     <div class='col-xs-12 col-sm-12 col-md-10 col-lg-10'>
                     <p style='font-family: Mr dafoe; font-size: 25px' class='text-right mt-3'>$artista</p>

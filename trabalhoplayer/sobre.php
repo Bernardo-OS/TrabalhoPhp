@@ -13,10 +13,10 @@ include('dados/array.php');
         
         <div class="col-md-8 ">
             <div class="card-body col-sm-12">
-                <p class="mt-4 text-muted pl-3 pr-3" style="font-size: 20px"> Player DB é um player stream de música onde pode se escutar por álbuns as músicas de artistas, feito como trabalho na disciplina de desenvolvimento web com php.</p>
-                <p class="mt-3 mb-3 text-muted pl-4 pr-3"> Por: Bernardo de Oliveira dos Santos</p>
-                <h5 class="mt-5 text-muted pl-3">Redes Sociais:</h5>
-                <p class="mt-3 mb-3 text-muted pl-4 pr-3">PhP, framework de HTML, CSS e JavaScript Bootstrap</p>
+                <p class="mt-4 text-white pl-3 pr-3" style="font-size: 20px"> Player DB é um player stream de música onde pode se escutar por álbuns as músicas de artistas, feito como trabalho na disciplina de desenvolvimento web com php.</p>
+                <p class="mt-3 mb-3 text-white pl-4 pr-3"> Por: Bernardo de Oliveira dos Santos</p>
+                <h5 class="mt-5 text-white pl-3">Redes Sociais:</h5>
+                <p class="mt-3 mb-3 text-white pl-4 pr-3">PhP, framework de HTML, CSS e JavaScript Bootstrap</p>
             </div>
         </div>
     </div>

@@ -15,15 +15,22 @@
         <style>@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Special+Elite&display=swap');</style>
         <style>@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');</style>
         <style>
-            .col-md-12{
-                border: 1px solid green;
-                background: gray;
+            .side-bar-esquerda{
+                /*border: 1px solid red;*/
+                background-color: #1A1A1A;
+                height: 100vh !important; 
+            }
+            .side-bar-esquerda h3{
+                color: #DEDEDE;
+            }
+            body{
+                overflow-x: hidden;
             }
         </style>
 </head>
-<body style="background-color: rgb(65, 65, 65);">
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+<body style="background-color: rgb(65, 65, 65); display:flex;">
+<div class="row" style="background-color: #1A1A1A;">
+    <div class=" side-bar-esquerda">
         <div class="row mr-2">
         <h3><i class="fa fa-play" style="color: #cc0f0f;"></i>Playerdbphp</h3>
         </div>

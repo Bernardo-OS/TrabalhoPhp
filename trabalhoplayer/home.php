@@ -15,7 +15,7 @@ include('dados/array.php');
                 $artista = $album['artista'];
 
         
-                echo("<div class='mt-3 col-xs-6 col-sm-3 col-md-3 col-lg-3'>");
+                echo("<div class='mt-3 col-xs-6 col-sm-3 col-md-3 col-lg-3' >");
                     echo("<a href='detalhe.php? id=$id' style='text-decoration: none; color: rgb(120, 120, 120)'>");
                     echo("<div class='card text-white' style='background-color: rgb(45, 50, 50);'>");
                         echo("<div class='card-header'>$titulo</div>");
