@@ -4,7 +4,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="js/jquery-3.5.1.js" type="text/javascript"></script>
-
+<script src="js/tooltip.js"></script>
 
 <script src="js/cdn.datatables.net_1.13.4_js_jquery.dataTables.min.js" type="text/javascript"></script>
 <link href="css/cdn.datatables.net_1.13.4_css_jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>

@@ -33,8 +33,8 @@
                                 </div>
                             </div>
                             <div class='row justify-content-center'>
-                                <div class='col-xs-12 col-sm-12 col-md-10 col-lg-10 mt-5 text-center p-5'>
-                                    <img src='$capa' class='w-100 shadow bg-transparent rounded'>
+                                <div class='col-xs-12 col-sm-12 col-md-10 col-lg-10 mt-5 text-center p-'>
+                                    <img src='$capa' class='w-100 h-100 shadow bg-transparent rounded' style='max-width: 50%; max-heigth: 50%;'>
                                 </div>
                                 <div class='col-xs-12 col-sm-12 col-md-10 col-lg-10'>
                                     <p style='font-family: Mr dafoe; font-size: 25px' class='mt-3'>$artista</p>
