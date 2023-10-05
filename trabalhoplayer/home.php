@@ -23,14 +23,14 @@
                 $artista = $album['artista'];
 
         
-                echo("<div class='mt-3 col-xs-6 col-sm-3 col-md-3 col-lg-3' >");
+                echo("<div class='mt-3 col-xs-6 col-sm-3 col-md-3 col-lg-3'>");
                     echo("<a href='detalhe.php? id=$id' style='text-decoration: none; color: rgb(120, 120, 120)'>");
                     echo("<div class='card text-white' style='background-color: rgb(45, 50, 50);'>");
-                        echo("<div class='card-header text-truncate' </div>");/*title=$titulo data-toggle='tooltip'>$titulo*/
+                        echo("<div class='card-header text-truncate' title='$titulo' data-toggle='tooltip'>$titulo</div>");
                         echo("<div class='card-body p-0'><img src=$capa class='w-100'></div>");
-                        echo("<div class='card-footer'> $artista</div>");
-                    echo("</a>");  
-                    echo("</div>");  
+                        echo("<div class='card-footer'>$artista</div>");
+                    echo("</div>");
+                    echo("</a>");    
                 echo("</div>");
             }
             ?>
