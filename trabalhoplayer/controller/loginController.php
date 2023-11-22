@@ -22,9 +22,9 @@ if ($_POST) {
         //inserir
         $total = $perfis->insert();
         if ($total == 1) {
-            header('location:../listarPerfisPage.php?cod=sucess');
+            header('location:../home.php?cod=sucess');
         } else {
-            header('location:../listarPerfisPage.php?cod=error');
+            header('location:../index.php?cod=error');
         }
     } else {
         //editar
@@ -33,14 +33,14 @@ if ($_POST) {
     //Excluir
     if (@$_REQUEST['id']) {
         //Se vier de request (query string) e a qs for id -- DELETA
-        require_once '../model/perfisModel.php';
+        require_once '../model/usuariosModel.php';
         $perfis = new perfisModel();
         if ($perfis->delete($_REQUEST['id']) == 1) {
             //Apagou com sucesso
             header('location:../listarPerfisPage.php?cod=sucess');
         } else {
             //Erro no apagar
-            header('location:../listarPerfisPage.php?cod=error');
+            header('location:../index.php?cod=error');
         }
     } else {
         //Listar
@@ -55,7 +55,7 @@ if ($_POST) {
 
 function loadAll() {
     //Listar
-    require_once './model/perfisModel.php';
+    require_once './model/usuariosModel.php';
     $perfis = new perfisModel();
     $perfisList = $perfis->loadAll();
     return $perfisList;
