@@ -1,5 +1,5 @@
 <?php
- require_once 'ConexaoMysql.php';
+ require_once 'conexaoMysql.php';
 class usuariosModel{             
 
     //Propriedades
@@ -65,7 +65,7 @@ class usuariosModel{
     }
     
     public function login($nome, $senha) {
-        require_once 'ConexaoMysql.php'; 
+        require_once 'conexaoMysql.php'; 
         echo('console.log ("certo")');
         $db = new ConexaoMysql();
         $db->Conectar();
@@ -88,7 +88,7 @@ class usuariosModel{
     }
 
     public  function delete($id){
-        //require_once '../model/ConexaoMysql.php';
+        //require_once '../model/conexaoMysql.php';
         $db = new ConexaoMysql();
         $db->Conectar();
         $sql = 'DELETE FROM usuario WHERE id = '.$id;
@@ -98,7 +98,7 @@ class usuariosModel{
     }
     
      public  function insert(){
-        //require_once '../model/ConexaoMysql.php';
+        //require_once '../model/conexaoMysql.php';
         $db = new ConexaoMysql();
         $db->Conectar();
         //$sql = 'INSERT INTO usuario VALUES(0, "","",0,1)';
@@ -109,7 +109,7 @@ class usuariosModel{
     }
     
     public  function update(){
-        //require_once '../model/ConexaoMysql.php';
+        //require_once '../model/conexaoMysql.php';
         $db = new ConexaoMysql();
         $db->Conectar();
         //$sql = 'UPDATE usuario SET(0,"","",0,1) WHERE id=1';

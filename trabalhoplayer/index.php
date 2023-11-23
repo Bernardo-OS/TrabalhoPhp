@@ -24,17 +24,17 @@
                     <div class="mb-3 mt-3">
                         <label for="nome" class="form-label">Nome:</label>
                         <input type="text" class="form-control" id="nome" 
-                            placeholder="Insira seu nome" name="nome" required="">
+                            placeholder="Insira seu nome" name="nome" required="" value="<?php echo isset($_COOKIE['lembrar_nome']) ? $_COOKIE['lembrar_nome']:'' ?>">
                     </div>
                     <div class="mb-3 mt-3">
                         <label for="senha" class="form-label">Senha:</label>
                         <input type="password" class="form-control" id="senha" 
-                            placeholder="Insira sua senha" name="senha" required="">
+                            placeholder="Insira sua senha" name="senha" required="" value="<?php echo isset($_COOKIE['lembrar_senha']) ? $_COOKIE['lembrar_senha']:'' ?>">
                     </div>
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="rememberme" id="LembrarSenha" <?php echo isset($_COOKIE['rememberme']) ? 'checked':'' ?> >
-                            <label class="form-check-label" for="rememberme"> Remember me</label>
+                            <input class="form-check-input" type="checkbox" name="rememberme" id="LembrarSenha" <?php echo isset($_COOKIE['lembrar_nome']) ? 'checked':'' ?>>
+                            <label class="form-check-label" for="LembrarSenha"> Remember me</label>
                         </div>
                     </div>
                     <div class="d-grid">
