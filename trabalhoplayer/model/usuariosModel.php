@@ -60,11 +60,33 @@ class usuariosModel{
                 $this->nome = $data['nome']; //array que vem do bd
                 $this->senho = $data['senha']; //array que vem do bd
               }
-        }
+        } 
         $db->Desconectar();
-        return $result;
     }
     
+    public function login($nome, $senha) {
+        require_once 'ConexaoMysql.php'; 
+        echo('console.log ("certo")');
+        $db = new ConexaoMysql();
+        $db->Conectar();
+        //SELECT * FROM usuarios where nome="" and senha="";
+        $sql = 'SELECT * FROM usuario '
+                . 'WHERE nome="'.$nome.'" and senha="'.$senha.'"';
+                echo $sql;
+        $result = $db->Consultar($sql);
+        if ($db->total == 1) {
+            foreach ($result as $data) {
+                $this->id = $data['id']; //array que vem do bd
+                $this->nome = $data['nome']; //array que vem do bd
+                $this->senha = $data['senha']; //array que vem do bd
+                
+            }   
+            
+        }
+        $db->Desconectar();
+        return $db->total;
+    }
+
     public  function delete($id){
         //require_once '../model/ConexaoMysql.php';
         $db = new ConexaoMysql();

@@ -9,22 +9,33 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <?php
+
+            // if(isset($_COOKIE['lembrar_senha']) $$ $_COOKIE['lembra_senha'] == 'true') {
+            //     header('Location: ./home.php');
+
+            // }
             include("shared/sidebar.php");
             ?>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-            <form method="get" action="controller/loginController.php">
+            <form method="post" action="controller/loginController.php">
                 <div class="row" style="border: 2px solid darkred;
                     margin: 30px 30px 30px 30px; padding: 20px">
                     <div class="mb-3 mt-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" 
-                            placeholder="Insira seu email" name="email" required="">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" 
+                            placeholder="Insira seu nome" name="nome" required="">
                     </div>
                     <div class="mb-3 mt-3">
                         <label for="senha" class="form-label">Senha:</label>
                         <input type="password" class="form-control" id="senha" 
                             placeholder="Insira sua senha" name="senha" required="">
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="rememberme" id="LembrarSenha" <?php echo isset($_COOKIE['rememberme']) ? 'checked':'' ?> >
+                            <label class="form-check-label" for="rememberme"> Remember me</label>
+                        </div>
                     </div>
                     <div class="d-grid">
                         <input type="submit" value="Logar"

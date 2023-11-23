@@ -3,7 +3,7 @@
 class ConexaoMysql {
 
     protected $mysqli;
-    protected $server = '127.0.0.1'; //Endereço do servidor
+    protected $server = 'localhost'; //Endereço do servidor
     protected $user = 'root'; //Usuario que acessa o banco
     protected $pass = 'asasas'; //Senha do usuário
     protected $dataBase = 'playerbd'; //Nome da base de dados
