@@ -32,11 +32,11 @@
                 <input required type="file" class="form-control" id="imagem" name="imagem" value="<?php echo isset($album)? $album->getImagem():'' ?>" placeholder="Coloque o caminho da imagem" >
             </div>
             <div class="mb-3 mt-3">
-                <label for="titulo">Data de lançamento do álbum:</label>
+                <label for="data_lancamento">Data de lançamento do álbum:</label>
                 <input required type="text" class="form-control" id="data_lancamento" name="data_lancamento" value="<?php echo isset($album)? $album->getDataLancamento():'' ?>" placeholder="Coloque a data de lançamento do álbum" >
             </div>
             <div class="mb-3 mt-3">
-                <label for="titulo">Autor do álbum:</label>
+                <label for="autor">Autor do álbum:</label>
                 <input required type="text" class="form-control" id="artista" name="artista" value="<?php echo isset($album)? $album->getArtista():'' ?>" placeholder="Coloque o artista autor do álbum" >
             </div>
             <input type="hidden" name="id" value="<?php echo isset($album)? $album->getId():'0' ?>">

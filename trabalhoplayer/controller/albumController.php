@@ -31,4 +31,11 @@ if ($_POST) {
     }
 } 
 
+function loadAll(){
+    require_once '../model/albunsModel.php';
+    $albuns = new albumModel();
+    $albunsList = $albuns->loadAll();
+    return $albunsList;
+}
+
 header('location:../home.php');
