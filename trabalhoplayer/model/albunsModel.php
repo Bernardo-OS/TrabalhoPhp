@@ -1,11 +1,17 @@
 <?php
- require_once 'ConexaoMysql.php';
-class usuariosModel{             
+
+require_once 'conexaoMysql.php';
+
+class albumModel{             
 
     //Propriedades
     protected $id;
-    protected $nome;
-    protected $senha;
+    protected $titulo;
+    protected $imagem;
+
+    protected $data_lancamento;
+
+    protected $artista;
     
     //Métodos acessores e modificadores
     public function getId() {
@@ -37,7 +43,7 @@ class usuariosModel{
         $this->titulo = $titulo;
     }
 
-    public function setSImagem($imagem): void {
+    public function setImagem($imagem): void {
         $this->imagem = $imagem;
     }
 
@@ -59,7 +65,7 @@ class usuariosModel{
         //require_once './model/ConexaoMysql.php';
         $db = new ConexaoMysql();
         $db->Conectar();
-        $sql = 'SELECT * FROM usuario';
+        $sql = 'SELECT * FROM album';
         $result = $db->Consultar($sql);
         $db->Desconectar();
         return $result;
@@ -69,7 +75,7 @@ class usuariosModel{
         //require_once './model/ConexaoMysql.php';
         $db = new ConexaoMysql();
         $db->Conectar();
-        $sql = 'SELECT * FROM usuario WHERE id = '.$id;
+        $sql = 'SELECT * FROM album WHERE id = '.$id;
         $result = $db->Consultar($sql);
         if($db->total==1){
             foreach ($result as $data) {
@@ -99,7 +105,7 @@ class usuariosModel{
         $db = new ConexaoMysql();
         $db->Conectar();
         //$sql = 'INSERT INTO album VALUES(0, "","",0,1)';
-        $sql = 'INSERT INTO album VALUES(0, "'.$this->titulo.'","",'.$this->imagem.','.$this->artista.')';
+        $sql = 'INSERT INTO album VALUES(NULL, "'.$this->titulo.'","'.$this->imagem.'","'.$this->data_lancamento.'","'.$this->artista.'")';
         $db->Executar($sql);
         $db->Desconectar();
         return $db->total;
@@ -110,7 +116,7 @@ class usuariosModel{
         $db = new ConexaoMysql();
         $db->Conectar();
         //$sql = 'UPDATE album SET(0,"","",0,1) WHERE id=1';
-        $sql = 'UPDATE album SET(0,"'.$this->titulo.'","",'.$this->imagem.','.$this->data_lancamento.','.$this->artista.') WHERE id='.$this->id;
+        $sql = 'UPDATE album SET(NULL, "'.$this->titulo.'","'.$this->imagem.'","'.$this->data_lancamento.'","'.$this->artista.'") WHERE id='.$this->id;
         $db->Executar($sql);
         $db->Desconectar();
         return $db->total;

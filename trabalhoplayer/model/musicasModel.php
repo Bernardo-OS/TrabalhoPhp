@@ -4,8 +4,8 @@ class usuariosModel{
 
     //Propriedades
     protected $id;
-    protected $nome;
-    protected $senha;
+    protected $titulo;
+    protected $arquivo_audio;
     
     //Métodos acessores e modificadores
     public function getId() {
@@ -45,7 +45,7 @@ class usuariosModel{
         //require_once './model/ConexaoMysql.php';
         $db = new ConexaoMysql();
         $db->Conectar();
-        $sql = 'SELECT * FROM usuario';
+        $sql = 'SELECT * FROM musica';
         $result = $db->Consultar($sql);
         $db->Desconectar();
         return $result;
@@ -61,9 +61,7 @@ class usuariosModel{
             foreach ($result as $data) {
                 $this->id = $data['id']; //array que vem do bd
                 $this->titulo = $data['titulo']; //array que vem do bd
-                $this->imagem = $data['imagem']; //array que vem do bd
-                $this->data_lancamento = $data['data_lancamento']; //array que vem do bd
-                $this->artista = $data['artista']; //array que vem do bd
+                $this->imagem = $data['arquivo_audio']; //array que vem do bd
             }
         }
         $db->Desconectar();
@@ -85,7 +83,7 @@ class usuariosModel{
         $db = new ConexaoMysql();
         $db->Conectar();
         //$sql = 'INSERT INTO musica VALUES(0, "","",0,1)';
-        $sql = 'INSERT INTO musica VALUES(0, "'.$this->titulo.'","",'.$this->arquivo_audio.')';
+        $sql = 'INSERT INTO musica VALUES(NULL, "'.$this->titulo.'","'.$this->arquivo_audio.'")';
         $db->Executar($sql);
         $db->Desconectar();
         return $db->total;
@@ -96,7 +94,7 @@ class usuariosModel{
         $db = new ConexaoMysql();
         $db->Conectar();
         //$sql = 'UPDATE musica SET(0,"","",0,1) WHERE id=1';
-        $sql = 'UPDATE musica SET(0,"'.$this->titulo.'","",'.$this->arquivo_audio.') WHERE id='.$this->id;
+        $sql = 'UPDATE musica SET(NULL, "'.$this->titulo.'","'.$this->arquivo_audio.'") WHERE id='.$this->id;
         $db->Executar($sql);
         $db->Desconectar();
         return $db->total;

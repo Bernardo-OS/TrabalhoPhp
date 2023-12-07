@@ -124,6 +124,6 @@ $albuns = array(
 ?>
 
 <?php
-require_once './shared/footer.php';
+//require_once '../shared/footer.php';
 ?>
 
