@@ -1,41 +1,49 @@
 <?php
-require_once '../model/albunsModel.php';
 
-$album = new albumModel();
 
 if ($_GET) {
-    $id = $_GET["id"];
-    $album->loadById($id);
+    require '../model/albunsModel.php';
+
+    $album = new albumModel();
+    if (isset($_GET['id'])){
+        $id = $_GET["id"];
+        $album->loadById($id);
+    }
 }
 
 if ($_POST) {
+    require '../model/albunsModel.php';
+
+    $album = new albumModel();
+    echo('post');
     //Inserir,editar ou logar
     $titulo = $_POST['titulo'];
     $imagem = $_FILES['imagem'];
     $data_lancamento = $_POST['data_lancamento'];
-    $nomeImagem = $imagem['name'];
-
-    if (isset($imagem)){
+    $artista = $_POST['artista'];
+    
+        $nomeImagem = basename($_FILES['imagem']['name']);
         $caminhoUpload = "/var/www/html/TrabalhoPhp-1/trabalhoplayer/uploads/album/".$nomeImagem;
-        move_uploaded_file($imagem['tmp_name'], $caminhoUpload);
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoUpload);
         $album ->setImagem($nomeImagem);
-    }
     
     $album ->setTitulo($titulo);
     $album ->setDataLancamento($data_lancamento);
+    $album ->setArtista($artista);
 
     if ($album->getId()){
         $album->update();
     } else {
         $album->insert();
     }
+
+    header('location:../home.php');
 } 
 
 function loadAll(){
-    require_once '../model/albunsModel.php';
-    $albuns = new albumModel();
-    $albunsList = $albuns->loadAll();
+    require 'model/albunsModel.php';
+    $album = new albumModel();
+    $albunsList = $album->loadAll();
     return $albunsList;
+    //echo('funcao');
 }
-
-header('location:../home.php');

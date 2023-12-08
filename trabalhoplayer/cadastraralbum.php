@@ -16,10 +16,10 @@
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <?php
             include("shared/sidebar.php");
-            if(isset($_REQUEST['cod'])){
+            // if(isset($_REQUEST['cod'])){
                 require_once './controller/albumController.php';
-                print_r($album);
-            }
+            //     print_r($album);
+            // }
             ?>
         </div>
         <form method="post" action="controller/albumController.php" enctype="multipart/form-data">
